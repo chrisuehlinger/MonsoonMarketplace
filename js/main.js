@@ -369,7 +369,7 @@ function ready(error, world, names) {
 
   function gotoCountry(country) {
     queue()
-    .defer(d3.html, "articles/" + country.properties.name + '.html')
+    .defer(d3.html, "articles/" + country.properties.name.toLowerCase() + '.html')
     .await(function(error,articleHTML){
       error && console.log(error);
       turnToCountry(country)
