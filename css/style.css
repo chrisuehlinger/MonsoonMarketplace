@@ -103,38 +103,39 @@ body {
 /* line 104, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
 canvas {
   position: fixed;
+  top: 0;
   z-index: 100; }
-  /* line 107, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+  /* line 108, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
   .article-mode canvas {
     z-index: -1; }
 
-/* line 110, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+/* line 111, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
 article {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
   font-family: Oxygen; }
 
-/* line 116, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+/* line 117, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
 p {
   line-height: 1.5; }
 
-/* line 119, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+/* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
 .thumb {
   position: absolute; }
-  /* line 122, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+  /* line 123, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
   .thumb .thumbinner {
     width: auto !important; }
-  /* line 125, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+  /* line 126, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
   .thumb img {
     height: auto;
     max-width: 280px; }
-  /* line 129, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+  /* line 130, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
   .thumb.tright {
     left: 105%;
     padding-left: 10px;
     border-left: 1px solid black; }
-  /* line 134, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
+  /* line 135, /Users/Chris/Development/NextGenLessons/MonsoonMarket/css/style.sass */
   .thumb.tleft {
     right: 105%;
     padding-right: 10px;
