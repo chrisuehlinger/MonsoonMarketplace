@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "style.css",
+  "sources": [
+    "style.sass"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA;AAEA;EACE,AAAQ;;;AAEV;EACE,AAAU;EACV,AAAS;;EACX,AAAc;IACV,AAAS;;;AAEb;EACE,AAAW;EACX,AAAQ;EACR,AAAU;EACV,AAAa;;;AAEf;EACE,AAAa;;;AAEf;EACE,AAAU;;EAEZ,AAAO;IACH,AAAO;;EAEX,AAAO;IACH,AAAQ;IACR,AAAW;;EAEf,AAAM;IACF,AAAM;IACN,AAAc;IACd,AAAa;;EAEjB,AAAM;IACF,AAAO;IACP,AAAe;IACf,AAAc",
+  "names": []
+}
