@@ -243,7 +243,7 @@ var initialScale = 500;
 var initialRotation = [-75, 5]
 var projection = d3.geo.orthographic()
     .scale(initialScale)
-    .translate([width / 2, height / 2])
+    .translate([5 * width / 8, height / 2])
     .clipAngle(90)
     .rotate(initialRotation)
 
@@ -325,7 +325,7 @@ function ready(error, world, names) {
     }
     
     if(newCountry){
-      backFromCountry();
+      backFromCountry(true);
       setTimeout(function(){
         gotoCountry(newCountry);
       }, 2500);
@@ -375,36 +375,41 @@ function ready(error, world, names) {
       turnToCountry(country)
       .each('end', zoomIn)
       
+      currentMode = 'articleMode';
+        $('body')
+          .removeClass('map-mode')
+          .addClass('article-mode');
+      
       setTimeout(function(){
         $article.hide();
         $article.html(articleHTML);
         $article.fadeIn(1000, function(){
           visitedCities.geometries.push(country)
         });
+        
         history.pushState({}, country.properties.name, '#' + country.properties.name);
         postToTinCan(country.properties.name);
-        currentMode = 'articleMode';
-        $('html')
-          .removeClass('map-mode')
-          .addClass('article-mode');
+        
       }, 1500)
     });
     
   }
   
-  function backFromCountry(){
+  function backFromCountry(inTransit){
+    
+        
     $article.fadeOut(1000, function(){
       $article.html('');
       zoomOut()
         .each('end',turnFromCountry);
-      
-      setTimeout(function(){
-        $('html')
-          .removeClass('article-mode')
-          .addClass('map-mode');
-        currentMode = 'mapMode';
-        history.pushState({}, '', '#');
-      }, 1000);
+      if(!inTransit){
+        $('body')
+            .removeClass('article-mode')
+            .addClass('map-mode');
+          currentMode = 'mapMode';
+      }
+      history.pushState({}, '', '#');
+
     });
   }
 
