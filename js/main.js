@@ -382,7 +382,7 @@ function ready(error, world, names) {
           visitedCities.geometries.push(country)
         });
         history.pushState({}, country.properties.name, '#' + country.properties.name);
-        //postToTinCan(country.properties.name);
+        postToTinCan(country.properties.name);
         currentMode = 'articleMode';
         $('html')
           .removeClass('map-mode')
