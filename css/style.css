@@ -123,8 +123,8 @@ article {
       max-width: 450px; } }
   @media (max-width: 850px) {
     article {
-      max-width: 600px; } }
-  @media (max-width: 600px) {
+      max-width: 550px; } }
+  @media (max-width: 550px) {
     article {
       max-width: 90%; } }
 
@@ -169,7 +169,7 @@ p {
       /* line 165, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb.tleft {
         float: left; } }
-  @media (max-width: 600px) {
+  @media (max-width: 550px) {
     .thumb {
       max-width: 100%;
       margin: 0px;
