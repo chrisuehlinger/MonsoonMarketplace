@@ -245,7 +245,9 @@ var projection = d3.geo.orthographic()
     .scale(initialScale)
     .translate([5 * width / 8, height / 2])
     .clipAngle(90)
-    .rotate(initialRotation)
+    .rotate(initialRotation);
+
+
 
 var canvas = d3.select("canvas")
     .attr("width", width)
@@ -366,6 +368,26 @@ function ready(error, world, names) {
         backFromCountry();
       }
   })
+  
+  $(window).resize(function(){
+    width = window.outerWidth;
+    height = window.outerHeight;
+    canvas
+      .attr("width", width)
+      .attr("height", height);
+
+    projection
+      .scale(initialScale)
+      .translate([5 * width / 8, height / 2])
+      .clipAngle(90)
+      .rotate(initialRotation);
+
+    λ.domain([-width/2, width/2]);
+    φ.domain([-height/2, height/2]);
+    
+    if(currentMode === 'mapMode')
+      render();
+  });
 
   function gotoCountry(country) {
     queue()

@@ -98,7 +98,6 @@ body
     z-index: -1
     opacity: 0
     transform: translate3d(-2000px, 0, 0)
-    
 
 
 canvas
@@ -113,6 +112,18 @@ article
   margin: 0 auto
   position: relative
   font-family: Oxygen
+  
+  @media (max-width: 1200px)
+    max-width: 530px;
+    
+  @media (max-width: 1024px)
+    max-width: 450px;
+    
+  @media (max-width: 850px)
+    max-width: 600px;
+    
+  @media (max-width: 600px)
+    max-width: 90%;
     
 p
   line-height: 1.5
@@ -125,7 +136,13 @@ p
   
   img
     height: auto
-    max-width: 280px
+    max-width: 260px
+  
+    @media (max-width: 1200px)
+      max-width: 200px;
+    
+    @media (max-width: 1024px)
+      max-width: 150px;
     
   &.tright
     left: 105%
@@ -136,6 +153,35 @@ p
     right: 105%
     padding-right: 10px
     border-right: 1px solid black
+    
+  @media (max-width: 850px)
+    position:static;
+    max-width: 200px;
+    margin: 10px;
+    
+    &.tright
+      float: right;
+      
+    &.tleft
+      float: left;
+      
+  @media (max-width: 600px)
+    max-width: 100%;
+    margin: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    text-align: center;
+    
+    &.tright
+      float: none;
+      border-left: none;
+      
+    &.tleft
+      float: none;
+      border-right: none;
+      
+    
   
   
   
