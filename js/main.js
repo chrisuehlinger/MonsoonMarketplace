@@ -239,7 +239,7 @@ var landColor = '#fff';
 var boundaryColor = '#999';
 var oceanColor = '#45e2b4';
 
-var initialScale = window.outerHeight > 700 ? 500: 500;
+var initialScale = window.outerHeight > 500 ? 500 : window.outerHeight > 400 ? 300: 200;
 var initialRotation = [-75, 5]
 var projection = d3.geo.orthographic()
     .scale(initialScale)
@@ -372,7 +372,7 @@ function ready(error, world, names) {
   $(window).resize(function(){
     width = window.outerWidth;
     height = window.outerHeight;
-    initialScale = window.outerHeight > 700 ? 500: 500;
+    initialScale = window.outerHeight > 500 ? 500: window.outerHeight > 400 ? 300: 200;
     
     canvas
       .attr("width", width)
