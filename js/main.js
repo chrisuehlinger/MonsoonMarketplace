@@ -297,7 +297,7 @@ function ready(error, world, names) {
   }
   
   function closeEnough(co1, co2){
-    return distance(co1, co2) < 3;
+    return distance(co1, co2) < 5;
   }
   
   function clickHandler(e){
