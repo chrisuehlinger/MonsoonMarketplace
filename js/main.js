@@ -261,12 +261,12 @@ var path = d3.geo.path()
 
 queue()
     .defer(d3.json, "data/world-110m.json")
-    .defer(d3.tsv, "data/brics.tsv")
+    //.defer(d3.tsv, "data/brics.tsv")
     .await(ready);
 
 var fn = {};
 
-function ready(error, world, names) {
+function ready(error, world) {
   var globe = {type: "Sphere"},
       land = topojson.feature(world, world.objects.land),
       countries = topojson.feature(world, world.objects.countries).features,
@@ -274,13 +274,13 @@ function ready(error, world, names) {
       i = -1,
       n = countries.length;
 
-  countries = countries.filter(function(d) {
-    return names.some(function(n) {
-      if (d.id == n.id) return d.name = n.name;
-    });
-  }).sort(function(a, b) {
-    return a.name.localeCompare(b.name);
-  });
+//  countries = countries.filter(function(d) {
+//    return names.some(function(n) {
+//      if (d.id == n.id) return d.name = n.name;
+//    });
+//  }).sort(function(a, b) {
+//    return a.name.localeCompare(b.name);
+//  });
 
   function render(){
     c.clearRect(0, 0, width, height);
