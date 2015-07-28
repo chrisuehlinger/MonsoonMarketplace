@@ -263,10 +263,9 @@ var path = d3.geo.path()
 //    .defer(d3.json, "data/world-110m.json")
 //    //.defer(d3.tsv, "data/brics.tsv")
 //    .await(ready);
+var fn = {};
 
 ready(null, world);
-
-var fn = {};
 
 function ready(error, world) {
   var globe = {type: "Sphere"},
