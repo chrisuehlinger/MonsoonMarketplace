@@ -259,10 +259,12 @@ var path = d3.geo.path()
     .projection(projection)
     .context(c);
 
-queue()
-    .defer(d3.json, "data/world-110m.json")
-    //.defer(d3.tsv, "data/brics.tsv")
-    .await(ready);
+//queue()
+//    .defer(d3.json, "data/world-110m.json")
+//    //.defer(d3.tsv, "data/brics.tsv")
+//    .await(ready);
+
+ready(null, world);
 
 var fn = {};
 
