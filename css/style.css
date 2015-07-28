@@ -1,77 +1,49 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 @import url(http://fonts.googleapis.com/css?family=Courgette);
 @-webkit-keyframes bounceInLeft {
-  /* line 5, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   0%, 60%, 75%, 90%, 100% {
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-  /* line 9, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   0% {
     opacity: 0;
     transform: translate3d(-3000px, 0, 0); }
-
-  /* line 14, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   60% {
     opacity: 1;
     transform: translate3d(25px, 0, 0); }
-
-  /* line 19, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   75% {
     transform: translate3d(-10px, 0, 0); }
-
-  /* line 23, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   90% {
     transform: translate3d(5px, 0, 0); }
-
-  /* line 27, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   100% {
     transform: none; } }
 
 @keyframes bounceInLeft {
-  /* line 31, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   0%, 60%, 75%, 90%, 100% {
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-  /* line 35, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   0% {
     opacity: 0;
     transform: translate3d(-3000px, 0, 0); }
-
-  /* line 40, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   60% {
     opacity: 1;
     transform: translate3d(25px, 0, 0); }
-
-  /* line 45, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   75% {
     transform: translate3d(-10px, 0, 0); }
-
-  /* line 49, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   90% {
     transform: translate3d(5px, 0, 0); }
-
-  /* line 53, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   100% {
     transform: none; } }
 
 @-webkit-keyframes bounceOutLeft {
-  /* line 57, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   20% {
     opacity: 1;
     transform: translate3d(10px, 0, 0); }
-
-  /* line 62, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   100% {
     opacity: 0;
     transform: translate3d(-2000px, 0, 0); } }
 
 @keyframes bounceOutLeft {
-  /* line 69, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   20% {
     opacity: 1;
     transform: translate3d(10px, 0, 0); }
-
-  /* line 74, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   100% {
     opacity: 0;
     transform: translate3d(-2000px, 0, 0); } }
@@ -80,7 +52,18 @@
 body {
   margin: 0; }
 
-/* line 82, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+/* line 83, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+.map-mode .fa-arrow-circle-left {
+  display: none; }
+
+/* line 86, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+.article-mode .fa-arrow-circle-left {
+  position: fixed;
+  font-size: 36px;
+  top: 10px;
+  left: 10px; }
+
+/* line 92, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
 .canvas-title {
   font-family: Courgette, cursive;
   padding-left: 50px;
@@ -94,82 +77,90 @@ body {
   top: 20px;
   left: -30px;
   z-index: 101; }
-  /* line 97, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 107, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .article-mode .canvas-title {
     z-index: -1;
     opacity: 0;
     transform: translate3d(-2000px, 0, 0); }
 
-/* line 103, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+/* line 113, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
 canvas {
   position: fixed;
   top: 0;
   z-index: 100; }
-  /* line 107, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 117, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .article-mode canvas {
     z-index: -1; }
 
-/* line 110, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+/* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
 article {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
   font-family: Oxygen; }
   @media (max-width: 1200px) {
+    /* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     article {
       max-width: 530px; } }
   @media (max-width: 1024px) {
+    /* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     article {
       max-width: 450px; } }
   @media (max-width: 850px) {
+    /* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     article {
       max-width: 550px; } }
   @media (max-width: 550px) {
+    /* line 120, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     article {
       max-width: 90%; } }
 
-/* line 128, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+/* line 138, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
 p {
   line-height: 1.5; }
 
-/* line 131, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+/* line 141, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
 .thumb {
   position: absolute; }
-  /* line 134, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 144, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .thumb .thumbinner {
     width: auto !important; }
-  /* line 137, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 147, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .thumb img {
     height: auto;
     max-width: 260px; }
     @media (max-width: 1200px) {
+      /* line 147, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb img {
         max-width: 200px; } }
     @media (max-width: 1024px) {
+      /* line 147, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb img {
         max-width: 150px; } }
-  /* line 147, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 157, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .thumb.tright {
     left: 105%;
     padding-left: 10px;
     border-left: 1px solid black; }
-  /* line 152, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+  /* line 162, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
   .thumb.tleft {
     right: 105%;
     padding-right: 10px;
     border-right: 1px solid black; }
   @media (max-width: 850px) {
+    /* line 141, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     .thumb {
       position: static;
       max-width: 200px;
       margin: 10px; }
-      /* line 162, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+      /* line 172, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb.tright {
         float: right; }
-      /* line 165, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+      /* line 175, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb.tleft {
         float: left; } }
   @media (max-width: 550px) {
+    /* line 141, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
     .thumb {
       max-width: 100%;
       margin: 0px;
@@ -177,11 +168,11 @@ p {
       border-bottom: 1px solid #000;
       margin-bottom: 10px;
       text-align: center; }
-      /* line 176, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+      /* line 186, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb.tright {
         float: none;
         border-left: none; }
-      /* line 180, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
+      /* line 190, /Users/Chris/Development/NextGenLessons/MonsoonMarketplace/css/style.sass */
       .thumb.tleft {
         float: none;
         border-right: none; } }

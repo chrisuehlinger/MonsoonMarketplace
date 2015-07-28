@@ -363,11 +363,19 @@ function ready(error, world, names) {
   
   d3.select('body')
     .on('keyup', function(e){
-      if((d3.event.keyCode === 8 || d3.event.keyCode === 27) && currentMode === 'articleMode'){
-        d3.event.preventDefault();
-        backFromCountry();
-      }
-  })
+        if((d3.event.keyCode === 8 || d3.event.keyCode === 27) && currentMode === 'articleMode'){
+          d3.event.preventDefault();
+          backFromCountry();
+        }
+    })
+  
+  d3.select('.fa-arrow-circle-left')
+    .on('click', function(e){
+        if(currentMode === 'articleMode'){
+          d3.event.preventDefault();
+          backFromCountry();
+        }
+    });
   
   $(window).resize(function(){
     width = window.outerWidth;
@@ -410,6 +418,7 @@ function ready(error, world, names) {
         $article.fadeIn(1000, function(){
           visitedCities.geometries.push(country)
         });
+        $('.fa-arrow-circle-left').fadeIn(1000);
         
         history.pushState({}, country.properties.name, '#' + country.properties.name);
         postToTinCan(country.properties.name);
@@ -435,6 +444,7 @@ function ready(error, world, names) {
       history.pushState({}, '', '#');
 
     });
+    $('.fa-arrow-circle-left').fadeOut(1000);
   }
 
   function turnToCountry(country){
