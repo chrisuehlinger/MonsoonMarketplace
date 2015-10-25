@@ -43,8 +43,8 @@ function postToTinCan(location){
 
 
 
-var width = window.outerWidth,
-    height = window.outerHeight;
+var width = window.outerWidth || window.innerWidth,
+    height = window.outerHeight || window.innerHeight;
 
 
 var cities = {
@@ -239,7 +239,7 @@ var landColor = '#fff';
 var boundaryColor = '#999';
 var oceanColor = '#45e2b4';
 
-var initialScale = window.outerHeight > 500 ? 500 : window.outerHeight > 400 ? 300: 200;
+var initialScale = height > 500 ? 500 : height > 400 ? 300: 200;
 var initialRotation = [-75, 5]
 var projection = d3.geo.orthographic()
     .scale(initialScale)
@@ -379,9 +379,9 @@ function ready(error, world) {
     });
   
   $(window).resize(function(){
-    width = window.outerWidth;
-    height = window.outerHeight;
-    initialScale = window.outerHeight > 500 ? 500: window.outerHeight > 400 ? 300: 200;
+    width = window.outerWidth || window.innerWidth;
+    height = window.outerHeight || window.innerHeight;
+    initialScale = height > 500 ? 500: height > 400 ? 300: 200;
     
     canvas
       .attr("width", width)
