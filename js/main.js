@@ -360,6 +360,13 @@ function ready(error, world) {
         projection.rotate([λ(p[0]), φ(p[1])]);
         render();
       }
+    })
+    .on('touchmove', function(){
+      if(currentMode === 'mapMode'){
+        var p = [d3.mouse(this)[0] - width/2, d3.mouse(this)[1] - height/2];
+        projection.rotate([λ(p[0]), φ(p[1])]);
+        render();
+      }
     });
   
   d3.select('body')
