@@ -2,9 +2,9 @@ var tincan = new TinCan (
     {
         recordStores: [
             {
-                endpoint: "https://cloud.scorm.com/tc/public/",
-                username: "<Test User>",
-                password: "<Test User's Password>",
+                endpoint: "https://lrs.adlnet.gov/xapi/",
+                username: "chrisu",
+                password: "chrisu",
                 allowFail: false
             }
         ]
