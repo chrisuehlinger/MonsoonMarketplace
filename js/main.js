@@ -25,7 +25,7 @@ function postToTinCan(location){
             }
         },
         target: {
-            id: location,
+            id: 'http://chrisuehlinger.com/MonsoonMarketplace#' + location,
           "definition": {
             "name": {
                 "en-US": location
