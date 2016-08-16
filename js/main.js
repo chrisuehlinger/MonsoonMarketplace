@@ -15,6 +15,7 @@ function postToTinCan(location){
   tincan.sendStatement(
     {
         actor: {
+            name: "Anderson Demo",
             mbox: "mailto:andersondemo@ConnectionsAcademy.com"
         },
         verb: {
@@ -24,7 +25,7 @@ function postToTinCan(location){
             }
         },
         target: {
-            id: "http://localhost:1234/articles/" + location + ".html",
+            id: location,
           "definition": {
             "name": {
                 "en-US": location
