@@ -2,9 +2,9 @@ var tincan = new TinCan (
     {
         recordStores: [
             {
-                endpoint: "https://cloud.scorm.com/tc/public/",
-                username: "<Test User>",
-                password: "<Test User's Password>",
+                endpoint: "https://lrs.adlnet.gov/xapi/",
+                username: "chrisu",
+                password: "chrisu",
                 allowFail: false
             }
         ]
@@ -15,6 +15,7 @@ function postToTinCan(location){
   tincan.sendStatement(
     {
         actor: {
+            name: "Anderson Demo",
             mbox: "mailto:andersondemo@ConnectionsAcademy.com"
         },
         verb: {
@@ -24,7 +25,7 @@ function postToTinCan(location){
             }
         },
         target: {
-            id: "http://localhost:1234/articles/" + location + ".html",
+            id: 'http://chrisuehlinger.com/MonsoonMarketplace#' + location,
           "definition": {
             "name": {
                 "en-US": location
